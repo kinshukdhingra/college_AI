@@ -124,6 +124,8 @@ celerybeat.pid
 # Environments
 .env
 .venv
+.rasa_ai
+rasa_ai/
 env/
 venv/
 ENV/
