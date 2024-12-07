@@ -52,14 +52,14 @@ coverage.xml
 cover/
 
 # Translations
-*.mo
+
 *.pot
 
 # Django stuff:
-*.log
+#*.log
 local_settings.py
-db.sqlite3
-db.sqlite3-journal
+#db.sqlite3
+#db.sqlite3-journal
 
 # Flask stuff:
 instance/
@@ -76,11 +76,11 @@ docs/_build/
 target/
 
 # Jupyter Notebook
-.ipynb_checkpoints
+#.ipynb_checkpoints
 
 # IPython
 profile_default/
-ipython_config.py
+#ipython_config.py
 
 # pyenv
 #   For a library or package, you might want to ignore these files since the code is
@@ -140,7 +140,7 @@ venv.bak/
 .ropeproject
 
 # mkdocs documentation
-/site
+#/site
 
 # mypy
 .mypy_cache/
