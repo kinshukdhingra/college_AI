@@ -1,0 +1,6 @@
+models:
+  intent_model: "models/intent_model/"
+  ner_model: "models/ner_model/"
+
+api:
+  port: 5000

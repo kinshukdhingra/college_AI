@@ -1,0 +1,5 @@
+[
+    {"text": "What is the vision of the college?", "intent": "ask_vision"},
+    {"text": "Hello!", "intent": "greet"}
+  ]
+  

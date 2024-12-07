@@ -1,0 +1,15 @@
+[
+  {
+    "text": "ABC College is a prestigious institution founded in 2024.",
+    "entities": [
+      {"start": 0, "end": 11, "label": "ORG"},
+      {"start": 40, "end": 44, "label": "DATE"}
+    ]
+  },
+  {
+    "text": "The Computer Science department is offering new courses this year.",
+    "entities": [
+      {"start": 4, "end": 24, "label": "DEPARTMENT"}
+    ]
+  }
+]
