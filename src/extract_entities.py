@@ -24,6 +24,6 @@ if __name__ == "__main__":
     extractor = EntityExtractor()
 
     # Test input
-    user_input = "what is the vision of the college?"
+    user_input = "what is the vision of the BFCET?"
     extracted_entities = extractor.extract_entities(user_input)
     print("Extracted Entities:", extracted_entities)
