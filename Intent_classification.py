@@ -23,7 +23,8 @@ faq_to_embedding = {faq: embedding for faq, embedding in zip(faqs, faq_embedding
 
 # Query from the user
 # User's Question
-query = "how much does it cost?"
+query = "how can i apply?"
+
 
 # Encode the query
 # Converting the User Question into vector form (or Numerical form also known as embedings)
