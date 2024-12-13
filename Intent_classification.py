@@ -6,15 +6,22 @@ from scipy.spatial.distance import cosine
 
 # load the Fine Tuned Model
 # create a instance of model
-model = SentenceTransformer("college_faq_model")
+model = SentenceTransformer("models/Fine_Tuned_Intent_Model")
 
 # Example FAQs or intents
 # string representation of the Question
-faqs = ["What is the admission process?", "What are the fees?", "Tell me about courses."]
+faqs = ["Tell me about the College.",
+        "What courses are offered?",
+        "What is the admission process?",
+        "What are the facilities available here?",
+        "Who is Head of Department Of SSD?",
+        "How many Departments do you have?",
+        "What are the fees?"
+        ]
 
 # Encode FAQs
 # turning the FAQs into vector ( or numerical form which is also know as embedings)
-faq_embeddings = model.encode(faqs)
+faq_embeddings = model.encode(faqs, normalize_embeddings=True)
 
 # Create a mapping of embeddings to FAQ labels
 # creating a dictionary representation of the FAQs : Embedings
@@ -23,12 +30,12 @@ faq_to_embedding = {faq: embedding for faq, embedding in zip(faqs, faq_embedding
 
 # Query from the user
 # User's Question
-query = "how can i apply?"
+query = "how many departments does this college have?"
 
 
 # Encode the query
 # Converting the User Question into vector form (or Numerical form also known as embedings)
-query_embedding = model.encode(query)
+query_embedding = model.encode(query, normalize_embeddings=True)
 
 # intializing two variables to find the shortest distance
 closest_faq = None
@@ -42,6 +49,7 @@ for faq, embedding in faq_to_embedding.items():
         min_distance = distance
         closest_faq = faq
 
+print(f"User Query: {query}")
 # printing the closest FAQ
 # output shortest distance FAQs
 print(f"Closest FAQ: {closest_faq}")
@@ -49,9 +57,13 @@ print(f"Closest FAQ: {closest_faq}")
 # FAQs and intents are in dictionary form
 # Each intent is connected to a query
 faq_to_intent = {
+    "Tell me about the College.": "COLLEGE_OVERVIEW",
+    "What courses are offered?": "COURSE_QUERY",
     "What is the admission process?": "ADMISSION_QUERY",
-    "What are the fees?": "FEE_QUERY",
-    "Tell me about courses.": "COURSE_QUERY",
+    "What are the facilities available here?": "CAMPUS_QUERY",
+    "Who is Head of Department Of SSD?": "FACULTY_QUERY",
+    "How many Departments do you have?": "DEPARTMENT_QUERY",
+    "What are the fees?": "FEE_QUERY"
 }
 
 # Get the matched intent
@@ -69,7 +81,7 @@ intent_to_response = {
 }
 
 
-response = intent_to_response[matched_intent]
-print(f"Response: {response}")
+#response = intent_to_response[matched_intent]
+#print(f"Response: {response}")
 
 # **************this is optional****************
