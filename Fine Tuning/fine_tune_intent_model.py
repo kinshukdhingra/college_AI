@@ -3,7 +3,7 @@
 
 from sentence_transformers import SentenceTransformer, losses
 from torch.utils.data import DataLoader
-from training_data.fine_tune_data import train_examples
+from training_data.intent_train_data import train_examples
 
 # Load a pretrained model
 model = SentenceTransformer('all-MiniLM-L6-v2')
