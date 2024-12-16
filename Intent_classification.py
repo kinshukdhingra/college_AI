@@ -18,7 +18,13 @@ def intent_classifier(query):
             "What are the facilities available here?",
             "Who is Head of Department Of SSD?",
             "How many Departments do you have?",
-            "What are the fees?"
+            "What are the fees?",
+            "What are the placement opportunities?",
+            "Does the college have a strong alumni network?",
+            "What kind of extracurricular activities are available?",
+            "Does the college support research?",
+            "Does the college have international partnerships?",
+            "Are online courses available?"
             ]
 
     # Encode FAQs
@@ -60,7 +66,13 @@ def intent_classifier(query):
         "What are the facilities available here?": "CAMPUS_QUERY",
         "Who is Head of Department Of SSD?": "FACULTY_QUERY",
         "How many Departments do you have?": "DEPARTMENT_QUERY",
-        "What are the fees?": "FEE_QUERY"
+        "What are the fees?": "FEE_QUERY",
+        "What are the placement opportunities?":"PLACEMENT_AND_CAREER_QUERY",
+        "Does the college have a strong alumni network?": "ALUMNI_NETWORK_QUERY",
+        "What kind of extracurricular activities are available?":"EVENT_AND_ACTIVITES_QUERY",
+        "Does the college support research?": "RESEARCH_OPPORTUNITIES_QUERY",
+        "Does the college have international partnerships?":"INTERNATIONAL_COLLABORATION_QUERY",
+        "Are online courses available?":"ONLINE_LEARNING_AND_RESOURCES_QUERY"
     }
 
     # Get the matched intent
