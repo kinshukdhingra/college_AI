@@ -50,6 +50,9 @@ def intent_classifier(query):
         distance = cosine(query_embedding, embedding)
         if distance < min_distance:
             min_distance = distance
+            if min_distance > 0.6:
+                closest_faq = "what is this?"
+                break
             closest_faq = faq
 
     print(f"User Query: {query}")
@@ -72,7 +75,8 @@ def intent_classifier(query):
         "What kind of extracurricular activities are available?":"EVENT_AND_ACTIVITES_QUERY",
         "Does the college support research?": "RESEARCH_OPPORTUNITIES_QUERY",
         "Does the college have international partnerships?":"INTERNATIONAL_COLLABORATION_QUERY",
-        "Are online courses available?":"ONLINE_LEARNING_AND_RESOURCES_QUERY"
+        "Are online courses available?":"ONLINE_LEARNING_AND_RESOURCES_QUERY",
+        "what is this?":"FALLBACK"
     }
 
     # Get the matched intent

@@ -34,7 +34,7 @@ TRAIN_DATA = [
     ("What is the admission process at Baba Farid College of Engineering and Technology?", {"entities": [(12, 29, "PROCESS"),(33, 81, "COLLEGE")]}),
 
     #FreeStructure
-    ("What is the fee structure for MBA?", {"entities": [(12, 25, "PROCESS"), (30, 33, "COURSE")]}),   ####################################
+    ("What is the fee structure for MBA?", {"entities": [(12, 25, "PROCESS"), (30, 33, "COURSE")]}),
     ("Can you explain the hostel fee?", {"entities": [(20, 30, "PROCESS")]}),
 
     #Faculty
