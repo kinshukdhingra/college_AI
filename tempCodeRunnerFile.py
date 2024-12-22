@@ -1,0 +1,1 @@
+(24, 31, "FACULTY"), (35,44,"DEPARTMENT")

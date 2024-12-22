@@ -126,12 +126,17 @@
 
     ],
     "ner":[
+      "BUSINESS HOURS",
+      "CAMPUS_FACILITY",
       "CARDINAL",
       "COLLEGE",
       "COURSE",
       "DATE",
+      "DEPARTMENT",
       "EVENT",
       "FAC",
+      "FACILITY",
+      "FACULTY",
       "GPE",
       "INSTITUTE",
       "LANGUAGE",
@@ -143,10 +148,12 @@
       "ORG",
       "PERCENT",
       "PERSON",
+      "PROCESS",
       "PRODUCT",
       "QUANTITY",
       "TIME",
-      "WORK_OF_ART"
+      "WORK_OF_ART",
+      "YEAR"
     ]
   },
   "pipeline":[

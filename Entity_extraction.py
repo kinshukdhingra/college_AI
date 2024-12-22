@@ -4,7 +4,7 @@ import spacy
 nlp = spacy.load("models/fine_tuned_ner_model")
 
 # Sample text
-text = "I want to know about MBA or B.tech course at BABA FARID COLLEGE."
+text = "What is the fee structure?"
 
 # Process the text
 doc = nlp(text)

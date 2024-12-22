@@ -20,7 +20,7 @@ unaffected_pipes = [pipe for pipe in nlp.pipe_names if pipe != "ner"]
 # Step 6: Train the model
 with nlp.disable_pipes(*unaffected_pipes):  # Only train NER
     optimizer = nlp.resume_training()  # Resume training for pre-trained model
-    for epoch in range(4):  # Number of training epochs
+    for epoch in range(24):  # Number of training epochs
         losses = {}
         batches = minibatch(TRAIN_DATA, size=2)
         for batch in batches:
