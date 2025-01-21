@@ -8,18 +8,23 @@ train_examples = [
     InputExample(texts=["Describe the college in brief.", "Give an overview of this institution."], label=1.0),
     InputExample(texts=["When was the college established?", "What is the history of this institution?"], label=1.0),
     InputExample(texts=["What is the motto of the college?", "Does the college have a mission statement?"], label=1.0),
+    InputExample(texts=["What is the student population of the college?","Tell me about the College"], label=0.8),
 
     # 2. Courses Offered
     InputExample(texts=["What programs I can join after 12th?", "What courses are offered?"], label=1.0),
     InputExample(texts=["Do you offer undergraduate courses?", "What types of degrees can I pursue here?"], label=1.0),
     InputExample(texts=["Are there any diploma programs?", "Can I pursue certificate courses here?"], label=1.0),
     InputExample(texts=["Are part-time courses available?", "Do you offer evening or weekend classes?"], label=1.0),
+    InputExample(texts=["Does BFCET offer Training Courses?","is Btech available in Baba Farid College?"], label=1.0),
+    InputExample(texts=["does baba farid college offer Master programs?","Can i Do Mtech here?"], label=1.0),
+    InputExample(texts=["what programs are here offered?","what fields of Mtech is available here at BFCET"], label=1.0),
 
     # 3. Admissions
     InputExample(texts=["How can I apply?", "What is the admission process?"], label=1.0),
     InputExample(texts=["Is there an entrance exam?", "What are the eligibility criteria for admission?"], label=1.0),
     InputExample(texts=["What documents are required for admission?", "Can I apply online for admission?"], label=1.0),
     InputExample(texts=["When does the admission process start?", "What are the key deadlines for applying?"], label=1.0),
+    InputExample(texts=["What is the student population of the college?","Tell me about the College"], label=0.8),
 
     # 4. Campus Facility
     InputExample(texts=["Does this college have a library on campus?", "What are the facilities available here?"], label=1.0),

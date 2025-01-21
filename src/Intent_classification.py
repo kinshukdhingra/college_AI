@@ -5,7 +5,7 @@ from sentence_transformers import SentenceTransformer
 from scipy.spatial.distance import cosine
 
 
-def intent_classifier(query):
+def intent_prediction(query):
     # load the Fine Tuned Model
     # create a instance of model
     model = SentenceTransformer("models/Fine_Tuned_Intent_Model")
@@ -85,12 +85,13 @@ def intent_classifier(query):
 
 
 # asking user questions repeatedly to identify the intent
+#if __name__ = 
 while True:
     user_query = input("You: ")
     if user_query.lower() in ["quit", "back", "thats it", "bye"]:
         break
     else:
-        intent_classifier(user_query)
+        intent_prediction(user_query)
 
 
 
