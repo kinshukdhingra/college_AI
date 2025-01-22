@@ -4,35 +4,35 @@ tags:
 - sentence-similarity
 - feature-extraction
 - generated_from_trainer
-- dataset_size:52
+- dataset_size:57
 - loss:CosineSimilarityLoss
 base_model: sentence-transformers/all-MiniLM-L6-v2
 widget:
-- source_sentence: Are online courses available?
+- source_sentence: Are internships provided?
   sentences:
-  - Are there installment options for fee payment?
-  - Can students access digital libraries?
-  - What courses are offered?
+  - Does the college have a mission statement?
+  - Are classrooms equipped with smart boards?
+  - Do you help students find internships?
 - source_sentence: Do faculty members have industry experience?
   sentences:
-  - Is mentoring provided by faculty?
+  - What is the admission process?
+  - What are the options for cross-cultural learning?
   - Are professors approachable for students?
-  - Who are some notable faculty members?
-- source_sentence: Is there a cultural festival?
+- source_sentence: Can alumni help students with placements?
   sentences:
-  - Are sports facilities available for students?
-  - Give an overview of this institution.
-  - Are there leadership development programs?
-- source_sentence: Does this college have a library on campus?
+  - Who is Head of Department Of SSD?
+  - Is there a business school or management department?
+  - Is there an alumni association?
+- source_sentence: Can I participate in research projects?
   sentences:
-  - Who are some notable alumni?
+  - Are recorded lectures provided?
   - Does the college offer global exposure?
-  - What are the facilities available here?
-- source_sentence: Do you have student clubs or societies?
+  - Is there funding available for research?
+- source_sentence: What kind of extracurricular activities are available?
   sentences:
-  - What are the additional costs like hostel or library fees?
-  - What are the eligibility criteria for admission?
-  - Are there opportunities for community service?
+  - Who are some notable faculty members?
+  - Do you organize annual events?
+  - Does this college have the Engineering Department?
 pipeline_tag: sentence-similarity
 library_name: sentence-transformers
 ---
@@ -87,9 +87,9 @@ from sentence_transformers import SentenceTransformer
 model = SentenceTransformer("sentence_transformers_model_id")
 # Run inference
 sentences = [
-    'Do you have student clubs or societies?',
-    'Are there opportunities for community service?',
-    'What are the eligibility criteria for admission?',
+    'What kind of extracurricular activities are available?',
+    'Do you organize annual events?',
+    'Does this college have the Engineering Department?',
 ]
 embeddings = model.encode(sentences)
 print(embeddings.shape)
@@ -144,19 +144,19 @@ You can finetune this model on your own dataset.
 #### Unnamed Dataset
 
 
-* Size: 52 training samples
+* Size: 57 training samples
 * Columns: <code>sentence_0</code>, <code>sentence_1</code>, and <code>label</code>
-* Approximate statistics based on the first 52 samples:
-  |         | sentence_0                                                                       | sentence_1                                                                       | label                                                         |
-  |:--------|:---------------------------------------------------------------------------------|:---------------------------------------------------------------------------------|:--------------------------------------------------------------|
-  | type    | string                                                                           | string                                                                           | float                                                         |
-  | details | <ul><li>min: 7 tokens</li><li>mean: 9.02 tokens</li><li>max: 12 tokens</li></ul> | <ul><li>min: 7 tokens</li><li>mean: 9.46 tokens</li><li>max: 13 tokens</li></ul> | <ul><li>min: 1.0</li><li>mean: 1.0</li><li>max: 1.0</li></ul> |
+* Approximate statistics based on the first 57 samples:
+  |         | sentence_0                                                                       | sentence_1                                                                       | label                                                          |
+  |:--------|:---------------------------------------------------------------------------------|:---------------------------------------------------------------------------------|:---------------------------------------------------------------|
+  | type    | string                                                                           | string                                                                           | float                                                          |
+  | details | <ul><li>min: 7 tokens</li><li>mean: 9.12 tokens</li><li>max: 12 tokens</li></ul> | <ul><li>min: 7 tokens</li><li>mean: 9.49 tokens</li><li>max: 14 tokens</li></ul> | <ul><li>min: 0.8</li><li>mean: 0.99</li><li>max: 1.0</li></ul> |
 * Samples:
-  | sentence_0                                           | sentence_1                                                                 | label            |
-  |:-----------------------------------------------------|:---------------------------------------------------------------------------|:-----------------|
-  | <code>Are foreign language courses available?</code> | <code>Does the college have collaboration with global universities?</code> | <code>1.0</code> |
-  | <code>Can I participate in research projects?</code> | <code>Is there funding available for research?</code>                      | <code>1.0</code> |
-  | <code>Who is the principal of the college?</code>    | <code>Who is Head of Department Of SSD?</code>                             | <code>1.0</code> |
+  | sentence_0                                                  | sentence_1                                                                 | label            |
+  |:------------------------------------------------------------|:---------------------------------------------------------------------------|:-----------------|
+  | <code>does baba farid college offer Master programs?</code> | <code>Can i Do Mtech here?</code>                                          | <code>1.0</code> |
+  | <code>Are research internships offered?</code>              | <code>Do faculty members collaborate with students on research?</code>     | <code>1.0</code> |
+  | <code>Are foreign language courses available?</code>        | <code>Does the college have collaboration with global universities?</code> | <code>1.0</code> |
 * Loss: [<code>CosineSimilarityLoss</code>](https://sbert.net/docs/package_reference/sentence_transformer/losses.html#cosinesimilarityloss) with these parameters:
   ```json
   {

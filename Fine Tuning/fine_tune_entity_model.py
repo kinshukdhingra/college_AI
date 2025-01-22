@@ -1,7 +1,12 @@
 import spacy
 from spacy.training.example import Example
 from spacy.util import minibatch
-from training_data.entities_train_data import TRAIN_DATA
+import sys
+sys.path.append(r"H:\AI_Assistant\college_AI")
+
+from training_data.entities_train_data import get_entities
+
+entites_data = get_entities()
 
 # Step 1: Load the pre-trained model
 nlp = spacy.load("en_core_web_md")
@@ -22,7 +27,7 @@ with nlp.disable_pipes(*unaffected_pipes):  # Only train NER
     optimizer = nlp.resume_training()  # Resume training for pre-trained model
     for epoch in range(24):  # Number of training epochs
         losses = {}
-        batches = minibatch(TRAIN_DATA, size=2)
+        batches = minibatch(entites_data, size=2)
         for batch in batches:
             for text, annotations in batch:
                 # Convert text and annotations into spaCy's Example format

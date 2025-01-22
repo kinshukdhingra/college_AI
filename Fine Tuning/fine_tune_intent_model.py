@@ -3,14 +3,18 @@
 
 from sentence_transformers import SentenceTransformer, losses
 from torch.utils.data import DataLoader
-from training_data.intent_train_data import train_examples
+import sys
+sys.path.append(r"H:\AI_Assistant\college_AI")
 
+from training_data.intent_train_data import get_training_data
+
+intent_data = get_training_data()
 # Load a pretrained model
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 # Create a DataLoader
 # select the batch 16-32 for laptops or small GPU to train the model
-train_dataloader = DataLoader(train_examples, shuffle=True, batch_size=16)
+train_dataloader = DataLoader(intent_data, shuffle=True, batch_size=16)
 
 # Define the loss function
 # it tells us how good or poorly the model is performing
