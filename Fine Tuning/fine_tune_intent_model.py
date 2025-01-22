@@ -4,7 +4,10 @@
 from sentence_transformers import SentenceTransformer, losses
 from torch.utils.data import DataLoader
 import sys
-sys.path.append(r"H:\AI_Assistant\college_AI")
+import os
+src_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../'))
+sys.path.append(src_path)
+#sys.path.append(r"H:\AI_Assistant\college_AI")
 
 from training_data.intent_train_data import get_training_data
 

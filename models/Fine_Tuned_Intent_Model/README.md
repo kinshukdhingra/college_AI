@@ -8,31 +8,31 @@ tags:
 - loss:CosineSimilarityLoss
 base_model: sentence-transformers/all-MiniLM-L6-v2
 widget:
-- source_sentence: Are internships provided?
+- source_sentence: Is there access to virtual labs?
   sentences:
-  - Does the college have a mission statement?
-  - Are classrooms equipped with smart boards?
   - Do you help students find internships?
-- source_sentence: Do faculty members have industry experience?
-  sentences:
-  - What is the admission process?
-  - What are the options for cross-cultural learning?
-  - Are professors approachable for students?
-- source_sentence: Can alumni help students with placements?
-  sentences:
-  - Who is Head of Department Of SSD?
-  - Is there a business school or management department?
-  - Is there an alumni association?
-- source_sentence: Can I participate in research projects?
-  sentences:
+  - Do you offer evening or weekend classes?
   - Are recorded lectures provided?
-  - Does the college offer global exposure?
-  - Is there funding available for research?
-- source_sentence: What kind of extracurricular activities are available?
+- source_sentence: Are there any diploma programs?
   sentences:
-  - Who are some notable faculty members?
-  - Do you organize annual events?
-  - Does this college have the Engineering Department?
+  - What are the eligibility criteria for admission?
+  - Is there a research center for PhD students?
+  - Can I pursue certificate courses here?
+- source_sentence: What is the highest package offered?
+  sentences:
+  - Are there leadership development programs?
+  - What is the admission process?
+  - Do you have a career placement cell?
+- source_sentence: When was the college established?
+  sentences:
+  - What is the average placement percentage?
+  - What types of degrees can I pursue here?
+  - What is the history of this institution?
+- source_sentence: Is there a cultural festival?
+  sentences:
+  - Can I participate in student exchange programs?
+  - Are sports facilities available for students?
+  - Are there any research labs available?
 pipeline_tag: sentence-similarity
 library_name: sentence-transformers
 ---
@@ -87,9 +87,9 @@ from sentence_transformers import SentenceTransformer
 model = SentenceTransformer("sentence_transformers_model_id")
 # Run inference
 sentences = [
-    'What kind of extracurricular activities are available?',
-    'Do you organize annual events?',
-    'Does this college have the Engineering Department?',
+    'Is there a cultural festival?',
+    'Are sports facilities available for students?',
+    'Are there any research labs available?',
 ]
 embeddings = model.encode(sentences)
 print(embeddings.shape)
@@ -152,11 +152,11 @@ You can finetune this model on your own dataset.
   | type    | string                                                                           | string                                                                           | float                                                          |
   | details | <ul><li>min: 7 tokens</li><li>mean: 9.12 tokens</li><li>max: 12 tokens</li></ul> | <ul><li>min: 7 tokens</li><li>mean: 9.49 tokens</li><li>max: 14 tokens</li></ul> | <ul><li>min: 0.8</li><li>mean: 0.99</li><li>max: 1.0</li></ul> |
 * Samples:
-  | sentence_0                                                  | sentence_1                                                                 | label            |
-  |:------------------------------------------------------------|:---------------------------------------------------------------------------|:-----------------|
-  | <code>does baba farid college offer Master programs?</code> | <code>Can i Do Mtech here?</code>                                          | <code>1.0</code> |
-  | <code>Are research internships offered?</code>              | <code>Do faculty members collaborate with students on research?</code>     | <code>1.0</code> |
-  | <code>Are foreign language courses available?</code>        | <code>Does the college have collaboration with global universities?</code> | <code>1.0</code> |
+  | sentence_0                                           | sentence_1                                                   | label            |
+  |:-----------------------------------------------------|:-------------------------------------------------------------|:-----------------|
+  | <code>What e-learning tools are provided?</code>     | <code>Does the college use online learning platforms?</code> | <code>1.0</code> |
+  | <code>What programs I can join after 12th?</code>    | <code>What courses are offered?</code>                       | <code>1.0</code> |
+  | <code>Does the college have Wi-Fi facilities?</code> | <code>Are classrooms equipped with smart boards?</code>      | <code>1.0</code> |
 * Loss: [<code>CosineSimilarityLoss</code>](https://sbert.net/docs/package_reference/sentence_transformer/losses.html#cosinesimilarityloss) with these parameters:
   ```json
   {
@@ -297,8 +297,8 @@ You can finetune this model on your own dataset.
 - Python: 3.12.4
 - Sentence Transformers: 3.3.1
 - Transformers: 4.47.0
-- PyTorch: 2.5.1+cpu
-- Accelerate: 1.2.1
+- PyTorch: 2.3.1+cpu
+- Accelerate: 1.2.0
 - Datasets: 3.1.0
 - Tokenizers: 0.21.0
 

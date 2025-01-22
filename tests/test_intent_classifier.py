@@ -1,7 +1,9 @@
 import unittest
 
 import sys
-sys.path.append(r"H:\AI_Assistant\college_AI")
+import os
+src_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../'))
+sys.path.append(src_path)
 
 from src.Intent_classification import intent_prediction  # import the intent classification function from src folder
 

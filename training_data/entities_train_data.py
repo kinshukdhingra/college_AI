@@ -72,4 +72,5 @@ if __name__ == "__main__":
 4. YEAR
 5. CAMPUS_FACILITY
 6. FACULTY
+7. Student Facilities
 '''
