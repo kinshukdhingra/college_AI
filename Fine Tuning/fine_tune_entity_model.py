@@ -3,9 +3,11 @@ from spacy.training.example import Example
 from spacy.util import minibatch
 import sys
 import os
+# adding path to get access the folder files outside the current folder
 src_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../'))
 sys.path.append(src_path)
-from training_data.entities_train_data import get_entities
+
+from training_data.entities_train_data import get_entities     # importing training data entities from training data
 
 entites_data = get_entities()
 
