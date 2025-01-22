@@ -55,7 +55,7 @@ def intent_prediction(query):
                 break
             closest_faq = faq
 
-    print(f"User Query: {query}")
+    #print(f"User Query: {query}")
     # printing the closest FAQ
     # output shortest distance FAQs
     #print(f"Closest FAQ: {closest_faq}")
@@ -81,17 +81,14 @@ def intent_prediction(query):
 
     # Get the matched intent
     matched_intent = faq_to_intent[closest_faq]
-    print(f"Matched Intent: {matched_intent}")
-
+    #print(f"Matched Intent: {matched_intent}")
+    return matched_intent
 
 # asking user questions repeatedly to identify the intent
-#if __name__ = 
-while True:
-    user_query = input("You: ")
-    if user_query.lower() in ["quit", "back", "thats it", "bye"]:
-        break
-    else:
+if __name__ == "__main__": 
+    while (user_query := input("You: ").lower()) not in ["quit", "back", "thats it", "bye"]:
         intent_prediction(user_query)
+
 
 
 
