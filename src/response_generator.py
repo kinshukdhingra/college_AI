@@ -4,7 +4,7 @@ src_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../'))
 sys.path.append(src_path)
 
 from src.Intent_classification import intent_prediction  # importing intent prediction from intent classification
-from response_data import get_responses  # Import the get_response function from response_data
+from response_data.response import get_responses  # Import the get_response function from response_data
 
 def generate_response(query):
     # Get intent from the classification model
