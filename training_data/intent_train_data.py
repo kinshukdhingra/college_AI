@@ -4,7 +4,7 @@ from sentence_transformers import InputExample
 
 train_examples = [
     # 1. College Overview
-    InputExample(texts=["What is the Vision of the College?", "Tell me about the College."], label=1.0),
+    
     InputExample(texts=["Describe the college in brief.", "Tell me about the College."], label=1.0),
     InputExample(texts=["When was the college established?", "Tell me about the College."], label=1.0),
     InputExample(texts=["What is the motto of the college?", "Tell me about the College."], label=1.0),
