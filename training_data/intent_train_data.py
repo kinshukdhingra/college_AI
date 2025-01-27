@@ -46,6 +46,7 @@ train_examples = [
 
     # 2. Courses Offered
     InputExample(texts=["What programs I can join after 12th?", "What courses are offered?"], label=1.0),
+    InputExample(texts=["What programs I can join after 12th?", "What courses are offered?"], label=1.0),
     InputExample(texts=["Do you offer undergraduate courses?", "What types of degrees can I pursue here?"], label=1.0),
     InputExample(texts=["Are there any diploma programs?", "Can I pursue certificate courses here?"], label=1.0),
     InputExample(texts=["What undergraduate programs does BFGI offer after 12th?", "Do you offer evening or weekend classes?"], label=1.0),
