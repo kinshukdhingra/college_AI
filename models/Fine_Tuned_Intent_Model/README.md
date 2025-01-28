@@ -4,35 +4,36 @@ tags:
 - sentence-similarity
 - feature-extraction
 - generated_from_trainer
-- dataset_size:57
+- dataset_size:355
 - loss:CosineSimilarityLoss
 base_model: sentence-transformers/all-MiniLM-L6-v2
 widget:
-- source_sentence: Is there access to virtual labs?
+- source_sentence: Can you provide a brief overview of the college?
   sentences:
-  - Do you help students find internships?
-  - Do you offer evening or weekend classes?
-  - Are recorded lectures provided?
-- source_sentence: Are there any diploma programs?
+  - Tell me about the College.
+  - Tell me about the College.
+  - What kind of extracurricular activities are available?
+- source_sentence: ' Does the college organize yoga or wellness workshops? '
   sentences:
-  - What are the eligibility criteria for admission?
-  - Is there a research center for PhD students?
-  - Can I pursue certificate courses here?
-- source_sentence: What is the highest package offered?
+  - Tell me about the College.
+  - What kind of extracurricular activities are available?
+  - What kind of extracurricular activities are available?
+- source_sentence: ' Are there book fairs or literary events on campus?  '
   sentences:
-  - Are there leadership development programs?
-  - What is the admission process?
-  - Do you have a career placement cell?
-- source_sentence: When was the college established?
+  - How much does a program cost?
+  - What kind of extracurricular activities are available?
+  - How much does a program cost?
+- source_sentence: ' What is the average package offered to alumni of Baba Farid Group
+    of Institutions?'
   sentences:
-  - What is the average placement percentage?
-  - What types of degrees can I pursue here?
-  - What is the history of this institution?
-- source_sentence: Is there a cultural festival?
+  - What kind of extracurricular activities are available?
+  - How does the alumni network support the institution?
+  - How much does a program cost?
+- source_sentence: ' Does the campus host drama or theater performances? '
   sentences:
-  - Can I participate in student exchange programs?
-  - Are sports facilities available for students?
-  - Are there any research labs available?
+  - What kind of extracurricular activities are available?
+  - Is there a business school or management department?
+  - What kind of extracurricular activities are available?
 pipeline_tag: sentence-similarity
 library_name: sentence-transformers
 ---
@@ -87,9 +88,9 @@ from sentence_transformers import SentenceTransformer
 model = SentenceTransformer("sentence_transformers_model_id")
 # Run inference
 sentences = [
-    'Is there a cultural festival?',
-    'Are sports facilities available for students?',
-    'Are there any research labs available?',
+    ' Does the campus host drama or theater performances? ',
+    'What kind of extracurricular activities are available?',
+    'Is there a business school or management department?',
 ]
 embeddings = model.encode(sentences)
 print(embeddings.shape)
@@ -144,19 +145,19 @@ You can finetune this model on your own dataset.
 #### Unnamed Dataset
 
 
-* Size: 57 training samples
+* Size: 355 training samples
 * Columns: <code>sentence_0</code>, <code>sentence_1</code>, and <code>label</code>
-* Approximate statistics based on the first 57 samples:
-  |         | sentence_0                                                                       | sentence_1                                                                       | label                                                          |
-  |:--------|:---------------------------------------------------------------------------------|:---------------------------------------------------------------------------------|:---------------------------------------------------------------|
-  | type    | string                                                                           | string                                                                           | float                                                          |
-  | details | <ul><li>min: 7 tokens</li><li>mean: 9.12 tokens</li><li>max: 12 tokens</li></ul> | <ul><li>min: 7 tokens</li><li>mean: 9.49 tokens</li><li>max: 14 tokens</li></ul> | <ul><li>min: 0.8</li><li>mean: 0.99</li><li>max: 1.0</li></ul> |
+* Approximate statistics based on the first 355 samples:
+  |         | sentence_0                                                                        | sentence_1                                                                        | label                                                         |
+  |:--------|:----------------------------------------------------------------------------------|:----------------------------------------------------------------------------------|:--------------------------------------------------------------|
+  | type    | string                                                                            | string                                                                            | float                                                         |
+  | details | <ul><li>min: 7 tokens</li><li>mean: 11.41 tokens</li><li>max: 30 tokens</li></ul> | <ul><li>min: 7 tokens</li><li>mean: 10.32 tokens</li><li>max: 13 tokens</li></ul> | <ul><li>min: 1.0</li><li>mean: 1.0</li><li>max: 1.0</li></ul> |
 * Samples:
-  | sentence_0                                           | sentence_1                                                   | label            |
-  |:-----------------------------------------------------|:-------------------------------------------------------------|:-----------------|
-  | <code>What e-learning tools are provided?</code>     | <code>Does the college use online learning platforms?</code> | <code>1.0</code> |
-  | <code>What programs I can join after 12th?</code>    | <code>What courses are offered?</code>                       | <code>1.0</code> |
-  | <code>Does the college have Wi-Fi facilities?</code> | <code>Are classrooms equipped with smart boards?</code>      | <code>1.0</code> |
+  | sentence_0                                                             | sentence_1                                                          | label            |
+  |:-----------------------------------------------------------------------|:--------------------------------------------------------------------|:-----------------|
+  | <code>What is the due date for fee payment each semester?</code>       | <code>How much does a program cost?</code>                          | <code>1.0</code> |
+  | <code>What are the departmental goals for student retention?</code>    | <code>Is there a business school or management department?</code>   | <code>1.0</code> |
+  | <code> Does the college host technology-focused fests or expos?</code> | <code>What kind of extracurricular activities are available?</code> | <code>1.0</code> |
 * Loss: [<code>CosineSimilarityLoss</code>](https://sbert.net/docs/package_reference/sentence_transformer/losses.html#cosinesimilarityloss) with these parameters:
   ```json
   {
