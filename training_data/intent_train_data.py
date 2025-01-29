@@ -464,7 +464,7 @@ train_examples = [
     InputExample(texts=["What are the placement opportunities?", "Do students get campus placements?"], label=1.0),
     InputExample(texts=["What is the highest package offered?", "Do you have a career placement cell?"], label=1.0),
     InputExample(texts=["What companies visit for recruitment?", "What is the average placement percentage?"], label=1.0),
-InputExample(texts=["Are internships provided?", "Do you help students find internships?"], label=1.0),
+    InputExample(texts=["Are internships provided?", "Do you help students find internships?"], label=1.0),
     InputExample(texts=["Can you explain the placement process at the college and how students typicallyget ready for it?", "What is the average placement percentage?"], label=1.0),
     InputExample(texts=["What is the placement process followed at the college, and how do studentsprepare for it?", "What is the average placement percentage?"], label=1.0),
     InputExample(texts=["What steps are involved in the placement process at this institution?", "What is the average placement percentage?"], label=1.0),
@@ -854,7 +854,7 @@ InputExample(texts=["Are internships provided?", "Do you help students find inte
     InputExample(texts=["Are online courses available?", "Can students access digital libraries?"], label=1.0),
     InputExample(texts=["What e-learning tools are provided?", "Does the college use online learning platforms?"], label=1.0),
     InputExample(texts=["Is there access to virtual labs?", "Are recorded lectures provided?"], label=1.0),
-    InputExample(texts=["Are students taught using online simulations?", "Do you offer online certification programs?"], label=1.0)
+    InputExample(texts=["Are students taught using online simulations?", "Do you offer online certification programs?"], label=1.0),
 
     # 14, Exams
     InputExample(texts=["How can I download the exam timetable?", "What is the schedule for semester exams at BFGI?"], label=1.0),
