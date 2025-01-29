@@ -608,7 +608,7 @@ train_examples = [
     InputExample(texts=["Are online courses available?", "Can students access digital libraries?"], label=1.0),
     InputExample(texts=["What e-learning tools are provided?", "Does the college use online learning platforms?"], label=1.0),
     InputExample(texts=["Is there access to virtual labs?", "Are recorded lectures provided?"], label=1.0),
-    InputExample(texts=["Are students taught using online simulations?", "Do you offer online certification programs?"], label=1.0)
+    InputExample(texts=["Are students taught using online simulations?", "Do you offer online certification programs?"], label=1.0),
 
     # 14, Exams
     InputExample(texts=["How can I download the exam timetable?", "What is the schedule for semester exams at BFGI?"], label=1.0),
