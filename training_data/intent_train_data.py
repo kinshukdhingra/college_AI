@@ -494,10 +494,7 @@ train_examples = [
     InputExample(texts=["Are there any famous figures in business or government who earned their degree from here?", "Who are some notable alumni?"], label=1.0),
     InputExample(texts=["Which political leaders or business moguls are graduates of this institution?", "Who are some notable alumni?"], label=1.0),
     InputExample(texts=["Have any alumni from this college achieved fame in the fields of politics or business?", "Who are some notable alumni?"], label=1.0),
-<<<<<<< HEAD
-   
-=======
->>>>>>> 40ff4328ae445ee00a1c42d8d2b767dc5383daa6
+
 
     # 10. Events and Activities
     InputExample(texts=["What kind of extracurricular activities are available?", "Do you organize annual events?"], label=1.0),
@@ -619,11 +616,6 @@ train_examples = [
     InputExample(texts=["Are online courses available?", "Can students access digital libraries?"], label=1.0),
     InputExample(texts=["What e-learning tools are provided?", "Does the college use online learning platforms?"], label=1.0),
     InputExample(texts=["Is there access to virtual labs?", "Are recorded lectures provided?"], label=1.0),
-<<<<<<< HEAD
-    InputExample(texts=["Are students taught using online simulations?", "Do you offer online certification programs?"], label=1.0)
-
-]
-=======
     InputExample(texts=["Are students taught using online simulations?", "Do you offer online certification programs?"], label=1.0),
 
     # 14, Exams
@@ -731,15 +723,3 @@ train_examples = [
 
 
 ] 
-
-  
-
-
-def get_training_data():
-    """Return the training examples."""
-    return train_examples
-
-if __name__ == "__main__":
-    print("This module contains intent training data for fine-tuning.")
-
->>>>>>> 40ff4328ae445ee00a1c42d8d2b767dc5383daa6
