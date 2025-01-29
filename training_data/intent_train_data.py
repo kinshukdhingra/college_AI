@@ -10,8 +10,6 @@ train_examples = [
     InputExample(texts=["What is the motto of the college?", "Does the college have a mission statement?"], label=1.0),
     InputExample(texts=["Can you tell me about the college’s history and when it was established?", "Tell me about the College."], label=1.0),
 
-    # college overview and course offered label 0.0
-
     # 2. Courses Offered
     InputExample(texts=["What programs I can join after 12th?", "What courses are offered?"], label=1.0),
     InputExample(texts=["What programs I can join after 12th?", "What courses are offered?"], label=1.0),
@@ -594,12 +592,6 @@ train_examples = [
     InputExample(texts=["Are students encouraged to explore higher studies or engage in partnerships with foreign universities?", "What is the average placement percentage?"], label=1.0),
     InputExample(texts=["How does the college assist students in pursuing advanced studies or global academic collaborations?", "What is the average placement percentage?"], label=1.0),
 
-
-
-
-
-    
-    
     # 9. Alumni Network
     InputExample(texts=["Does the college have a strong alumni network?", "Who are some notable alumni?"], label=1.0),
     InputExample(texts=["Can alumni help students with placements?", "Is there an alumni association?"], label=1.0),
@@ -927,8 +919,6 @@ train_examples = [
      # 14, Exams
 
     InputExample(texts=["Are students taught using online simulations?", "Do you offer online certification programs?"], label=1.0),
-
-    # 14, Exams
     InputExample(texts=["How can I download the exam timetable?", "What is the schedule for semester exams at BFGI?"], label=1.0),
     InputExample(texts=["What is the schedule for semester exams at BFGI?", "What is the schedule for semester exams at BFGI?"], label=1.0),
     InputExample(texts=["Are mid-term exams conducted at BFGI?", "What is the schedule for semester exams at BFGI?"], label=1.0),
@@ -1029,7 +1019,7 @@ train_examples = [
     InputExample(texts=["Can rescheduled exams be further postponed in case of emergencies?", "What is the schedule for semester exams at BFGI?"], label=1.0),
     InputExample(texts=["Will my rescheduled exam clash with other classes or tests?", "What is the schedule for semester exams at BFGI?"], label=1.0),
     InputExample(texts=["How is the integrity of rescheduled exams maintained?", "What is the schedule for semester exams at BFGI?"], label=1.0),
-    InputExample(texts=["Are rescheduled exams recorded differently in the academic transcript? ", "What is the schedule for semester exams at BFGI?"], label=1.0)
+    InputExample(texts=["Are rescheduled exams recorded differently in the academic transcript? ", "What is the schedule for semester exams at BFGI?"], label=1.0),
 
    # 15, GREETINGS
    InputExample(texts=["How are you doing today? ", "How are you today?"], label=1.0),
@@ -1230,9 +1220,6 @@ train_examples = [
    InputExample(texts=["How do I identify and focus on my strengths? ", "What courses should I take next semester?"], label=1.0),
    InputExample(texts=["How can I stay motivated by celebrating small wins?", "What courses should I take next semester?"], label=1.0),
 ] 
-
-  
-
 
 def get_training_data():
     """Return the training examples."""
