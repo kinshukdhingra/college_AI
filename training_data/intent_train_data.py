@@ -287,6 +287,7 @@ train_examples = [
     InputExample(texts=["Do you provide hostel facilities?", "What infrastructure does the campus have?"], label=1.0),
     InputExample(texts=["Is there a cafeteria on campus?", "Are there any sports facilities available?"], label=1.0),
     InputExample(texts=["Does the college have Wi-Fi facilities?", "Are classrooms equipped with smart boards?"], label=1.0),
+    InputExample(texts=["Does the college have Wi-Fi facilities?", "Are classrooms equipped with smart boards?"], label=1.0),
 
     # 5. Faculty
     InputExample(texts=["Who is the principal of the college?", "Who is Head of Department Of SSD?"], label=1.0),
