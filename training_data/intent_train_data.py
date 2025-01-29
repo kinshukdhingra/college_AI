@@ -362,8 +362,6 @@ train_examples = [
     InputExample(texts=["Are there any green spaces on campus with picnic tables or benches?", "What are the facilities available here?"], label=1.0),
     InputExample(texts=["Does the campus have any outdoor spots with Wi-Fi for students to work in?", "What are the facilities available here?"], label=1.0),
     InputExample(texts=["Are there any outdoor areas on campus where students can hang out or study?", "What are the facilities available here?"], label=1.0),
-
-
    
     # 5. Faculty
     InputExample(texts=["Who is the principal of the college?", "Who is Head of Department Of SSD?"], label=1.0),
@@ -926,7 +924,7 @@ train_examples = [
     InputExample(texts=["Are online courses available?", "Can students access digital libraries?"], label=1.0),
     InputExample(texts=["What e-learning tools are provided?", "Does the college use online learning platforms?"], label=1.0),
     InputExample(texts=["Is there access to virtual labs?", "Are recorded lectures provided?"], label=1.0),
-    InputExample(texts=["Are students taught using online simulations?", "Do you offer online certification programs?"], label=1.0)
+    InputExample(texts=["Are students taught using online simulations?", "Do you offer online certification programs?"], label=1.0),
     InputExample(texts=["What online learning platforms does BFGI offer to students?", "Do you offer online certification programs?"], label=1.0),
     InputExample(texts=["Are there any specific e-learning portals or LMS (Learning Management System) at BFGI?", "Do you offer online certification programs?"], label=1.0),
     InputExample(texts=["How can students access the online library or e-resources?", "Do you offer online certification programs?"], label=1.0),
@@ -943,7 +941,7 @@ train_examples = [
     InputExample(texts=["Are there any virtual labs for practical subjects?", "Do you offer online certification programs?"], label=1.0),
     InputExample(texts=[" What are the steps to access BFGI’s digital library?", "Do you offer online certification programs?"], label=1.0),
     InputExample(texts=["What technical support is available for online learning tools?", "Do you offer online certification programs?"], label=1.0),
-    InputExample(texts=["What technical support is available for online learning tools?", "Do you offer online certification programs?"], label=1.0)
+    InputExample(texts=["What technical support is available for online learning tools?", "Do you offer online certification programs?"], label=1.0),
     InputExample(texts=["Are students taught using online simulations?", "Do you offer online certification programs?"], label=1.0),
     InputExample(texts=["Is there an IT helpdesk for resolving login or access issues?", "Do you offer online certification programs?"], label=1.0),
     InputExample(texts=["How are issues with online portals addressed?", "Do you offer online certification programs?"], label=1.0),
