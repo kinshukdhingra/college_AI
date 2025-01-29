@@ -917,7 +917,6 @@ train_examples = [
     InputExample(texts=["Will there be new simulation tools for science and engineering students?", "Do you offer online certification programs?"], label=1.0),
     
      # 14, Exams
-
     InputExample(texts=["Are students taught using online simulations?", "Do you offer online certification programs?"], label=1.0),
     InputExample(texts=["How can I download the exam timetable?", "What is the schedule for semester exams at BFGI?"], label=1.0),
     InputExample(texts=["What is the schedule for semester exams at BFGI?", "What is the schedule for semester exams at BFGI?"], label=1.0),
@@ -1117,7 +1116,7 @@ train_examples = [
    InputExample(texts=["What’s the vibe check for today?", "How are you today?"], label=1.0),
    InputExample(texts=["How would you rate your day so far? ", "How are you today?"], label=1.0),
    
-   # Academic Advising
+   # 16. Academic Advising
    InputExample(texts=["How do I choose a major?  ", "What courses should I take next semester?"], label=1.0),
    InputExample(texts=[" How many credits should I register for?", "What courses should I take next semester?"], label=1.0),
    InputExample(texts=["Can I change my major?", "What courses should I take next semester?"], label=1.0),
@@ -1227,4 +1226,3 @@ def get_training_data():
 
 if __name__ == "__main__":
     print("This module contains intent training data for fine-tuning.")
-
